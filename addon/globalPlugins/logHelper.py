@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Log Helper (logHelper.py), version 0.1-dev.
+# Log Helper (logHelper.py), version 0.2-dev.
 # An NVDA global plugin to make dealing with the NVDA log easier and more efficient.
 
 #    Copyright (C) 2019 Luke Davis <newanswertech@gmail.com>
@@ -27,6 +27,9 @@ from __future__ import unicode_literals
 import globalPluginHandler
 from scriptHandler import script
 
+# A global variable to track mark number
+logHelper_markNumber = 0
+
 class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 
 # CONFIG
@@ -40,10 +43,11 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		description="Inserts a mark line in the log to aid in debugging"
 		)
 	def script_logAMarkLine(self, gesture):
+		global logHelper_markNumber
 		from logHandler import log
 		import ui
-		markNumber = 0
-		message = self.markString.format(markNumber)
+		logHelper_markNumber += 1
+		message = self.markString.format(logHelper_markNumber)
 		if self.trailingNewlines > 0: message += "\n" * self.trailingNewlines
 		if len(message) <= 0: return	# Sanity check
 		ui.message("Log marked!")
