@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Debug Helper (debugHelper.py), version 0.6-dev0
+# Debug Helper (debugHelper.py), version 0.6-dev1
 # An NVDA global plugin to make dealing with the NVDA log easier and more efficient.
 
 #    Copyright (C) 2019 Luke Davis <newanswertech@gmail.com>
@@ -23,7 +23,8 @@
 
 from __future__ import unicode_literals
 from globalCommands import SCRCAT_TOOLS
-from scriptHandler import script
+# Disabled because of desired compatibility with 2017.3
+#from scriptHandler import script
 from configobj import ConfigObj
 import config
 import globalPluginHandler, globalVars
@@ -80,12 +81,13 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 				pass
 
 	# Script to insert a numbered mark line in the log, and announce the insertion and number to the user.
-	@script(
-		gesture="kb:nvda+shift+F1",
-		# Translators: input help message for a Debug Helper command
-		description=_("Inserts a mark line in the log to aid in debugging"),
-		category=SCRCAT_TOOLS
-		)
+	# Disabled because of desired compatibility with 2017.3
+	#@script(
+		#gesture="kb:nvda+shift+F1",
+		## Translators: input help message for a Debug Helper command
+		#description=_("Inserts a mark line in the log to aid in debugging"),
+		#category=SCRCAT_TOOLS
+		#)
 	def script_logAMarkLine(self, gesture):
 		import ui
 		from logHandler import log
@@ -99,6 +101,12 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		ui.message(_("Logging mark {0}!".format(globalVars.debugHelperMarkCount)))
 		log.info(message)
 		globalVars.debugHelperMarkCount += 1	# Increase the sequence number for next time
+
+	# Needed because @script is disabled from 2017.3 compatibility
+	script_logAMarkLine.category=SCRCAT_TOOLS
+	# Translators: input help message for a Debug Helper command
+	script_logAMarkLine.__doc__ = _("Inserts a mark line in the log to aid in debugging")
+	__gestures = { "kb:nvda+shift+f1":"logAMarkLine" }
 
 # Add-on config database
 # Pretty well ripped off from Enhanced Touch Gestures and Golden Cursor by Joseph Lee
