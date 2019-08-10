@@ -21,7 +21,7 @@ addon_info = {
 Inserts sequentially numbered mark lines in the log when you press NVDA+shift+F1, to make it easy to search for things, by "tagging" them.
 Let me know if you like the add-on, and especially features you want added."""),
 	# version
-	"addon_version" : "0.6-dev1",
+	"addon_version" : "0.6-dev2",
 	# Author(s)
 	"addon_author" : u"Luke Davis <newanswertech@gmail.com>",
 	# URL for the add-on documentation support
@@ -33,7 +33,7 @@ Let me know if you like the add-on, and especially features you want added."""),
 	# Last NVDA version supported/tested (e.g. "2018.4.0", ideally more recent than minimum version)
 	"addon_lastTestedNVDAVersion" : "2019.3",
 	# Add-on update channel (default is stable or None)
-	"addon_updateChannel" : "stable",
+	"addon_updateChannel" : "dev",
 }
 
 import os.path

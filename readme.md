@@ -48,4 +48,4 @@ Under the Settings section of NVDA Preferences, you will find a "Debug Helper" c
 * Initial release.
 
 [1]: https://addons.nvda-project.org/files/get.php?file=
-[2]: https://github.com/XLTechie/debugHelper/raw/0.6-dev1/debugHelper-0.6-dev1.nvda-addon
+[2]: https://github.com/XLTechie/debugHelper/raw/0.6-dev2/debugHelper-0.6-dev2.nvda-addon
