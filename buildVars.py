@@ -33,7 +33,7 @@ Let me know if you like the add-on, and especially features you want added."""),
 	# Last NVDA version supported/tested (e.g. "2018.4.0", ideally more recent than minimum version)
 	"addon_lastTestedNVDAVersion" : "2019.3",
 	# Add-on update channel (default is stable or None)
-	"addon_updateChannel" : "stable",
+	"addon_updateChannel" : None,
 }
 
 import os.path
