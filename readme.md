@@ -41,11 +41,10 @@ Note: the mark count will survive the reloading of plugins (NVDA+control+F3), bu
 
 Under the Settings section of NVDA Preferences, you will find a "Debug Helper" category. In the settings dialog you can change the number of blank lines inserted before and after each mark line. The default is one line before, and zero after, although you can use zero through 10 lines for either.
 
-## Change log
+## Change log and History
 
-### Version 1.0 (8 August, 2019)
+* Version 1.0 (22 August, 2019): Initial stable release.
+* Version 0.6-dev1 (8 August, 2019): Candidate submitted for community review.
 
-* Initial release.
-
-[1]: https://addons.nvda-project.org/files/get.php?file=
-[2]: https://addons.nvda-project.org/files/get.php?file=
+[1]: https://github.com/XLTechie/debugHelper/raw/1.0/debugHelper-1.0.nvda-addon
+[2]: https://github.com/XLTechie/debugHelper/raw/0.6-dev1/debugHelper-0.6-dev1.nvda-addon
