@@ -14,12 +14,11 @@
 
 # This add-on is intended to make debugging tasks easier for developers. If you make frequent use of the NVDA log, this may provide features that help you.
 # Other things are planned, but currently the only implemented feature is:
-# Press NVDA+shift+F1, to insert a sequentially numbered line in the log.
+# Press NVDA+shift+F1, to insert a sequentially numbered line in the log. (Can be remapped under Tools in Gesture Settings.)
 # This makes it easier to find where you were last, before or after you performed a certain action.
 # The lines are modeled after the old Linux Syslog mark lines, and look like this:
 # -- MARK 1 --
 # They are currently logged at the info loglevel.
-# Note that configuration from within NVDA is planned for later; for now see the CONFIG section below.
 
 from __future__ import unicode_literals
 from globalCommands import SCRCAT_TOOLS
@@ -102,7 +101,7 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		log.info(message)
 		globalVars.debugHelperMarkCount += 1	# Increase the sequence number for next time
 
-	# Needed because @script is disabled from 2017.3 compatibility
+	# Needed because @script is disabled for 2017.3 compatibility
 	script_logAMarkLine.category=SCRCAT_TOOLS
 	# Translators: input help message for a Debug Helper command
 	script_logAMarkLine.__doc__ = _("Inserts a mark line in the log to aid in debugging")
