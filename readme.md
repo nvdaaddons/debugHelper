@@ -45,6 +45,3 @@ Under the Settings section of NVDA Preferences, you will find a "Debug Helper" c
 
 * Version 1.0 (22 August, 2019): Initial stable release.
 * Version 0.6-dev1 (8 August, 2019): Candidate submitted for community review.
-
-[1]: https://github.com/XLTechie/debugHelper/raw/1.0/debugHelper-1.0.nvda-addon
-[2]: https://github.com/XLTechie/debugHelper/raw/0.6-dev2/debugHelper-0.6-dev2.nvda-addon

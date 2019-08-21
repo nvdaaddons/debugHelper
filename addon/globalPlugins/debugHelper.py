@@ -14,18 +14,14 @@
 
 # This add-on is intended to make debugging tasks easier for developers. If you make frequent use of the NVDA log, this may provide features that help you.
 # Other things are planned, but currently the only implemented feature is:
-# Press NVDA+shift+F1, to insert a sequentially numbered line in the log. (Can be remapped under Tools in Gesture Settings.)
+# Press NVDA+shift+F1, to insert a sequentially numbered line in the log. (Can be remapped under Tools in Input Gesture settings.)
 # This makes it easier to find where you were last, before or after you performed a certain action.
 # The lines are modeled after the old Linux Syslog mark lines, and look like this:
 # -- MARK 1 --
 # They are currently logged at the info loglevel.
 
-# See readme for release history, and git log for changes.
-
 from __future__ import unicode_literals
 from globalCommands import SCRCAT_TOOLS
-# Disabled because of desired compatibility with 2017.3
-#from scriptHandler import script
 from configobj import ConfigObj
 import config
 import globalPluginHandler, globalVars
@@ -82,13 +78,6 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 				pass
 
 	# Script to insert a numbered mark line in the log, and announce the insertion and number to the user.
-	# Disabled because of desired compatibility with 2017.3
-	#@script(
-		#gesture="kb:nvda+shift+F1",
-		## Translators: input help message for a Debug Helper command
-		#description=_("Inserts a mark line in the log to aid in debugging"),
-		#category=SCRCAT_TOOLS
-		#)
 	def script_logAMarkLine(self, gesture):
 		import ui
 		from logHandler import log
@@ -103,7 +92,6 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		log.info(message)
 		globalVars.debugHelperMarkCount += 1	# Increase the sequence number for next time
 
-	# Needed because @script is disabled for 2017.3 compatibility
 	script_logAMarkLine.category=SCRCAT_TOOLS
 	# Translators: input help message for a Debug Helper command
 	script_logAMarkLine.__doc__ = _("Inserts a mark line in the log to aid in debugging")
