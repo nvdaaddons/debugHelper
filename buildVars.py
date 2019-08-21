@@ -19,9 +19,9 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description" : _("""Makes debugging tasks easier for developers and others trying to solve problems.
 Inserts sequentially numbered mark lines in the log when you press NVDA+shift+F1, to make it easy to search for things, by "tagging" them.
-Let me know if you like the add-on, and especially features you want added."""),
+Contact me if you find it useful, and especially with feature ideas."""),
 	# version
-	"addon_version" : "0.6-dev2",
+	"addon_version" : "0.7-dev",
 	# Author(s)
 	"addon_author" : u"Luke Davis <newanswertech@gmail.com>",
 	# URL for the add-on documentation support
