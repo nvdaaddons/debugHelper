@@ -47,3 +47,6 @@ Under the Tools category of NVDA's Input Gestures panel, you can change NVDA+shi
 ### Version 1.0 (2019-08-22)
 
 * Initial release.
+    - Ability to generate numbered mark lines in the log (at info level).
+    - Ability to add 0-10 blank lines before and after each mark line.
+    - Configuration via NVDA settings dialog system.
