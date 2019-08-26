@@ -1,5 +1,5 @@
 version: "{branch}-{build}"
-#skip_non_tags: true
+
 max_jobs: 3
 
 environment:
@@ -8,10 +8,10 @@ environment:
 init:
   - ps: |
       if ($env:APPVEYOR_REPO_TAG_NAME) {
-        if ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev")) {
-          Set-AppveyorBuildVariable "prerelease" true
+        if ($env:APPVEYOR_REPO_TAG_NAME.StartsWith("beta-")) {
+          Set-AppveyorBuildVariable -Name "prerelease" -Value tru
         } else {
-          Set-AppveyorBuildVariable "prerelease" false
+          Set-AppveyorBuildVariable -Name "prerelease" -Value false
         }
       }
 
@@ -54,4 +54,4 @@ deploy:
   prerelease: $(prerelease)
   on:
     appveyor_repo_tag: true        # deploy on tag push only
-    - branch: /stable/
+    branch: /stable/
