@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Debug Helper (debugHelper.py), version 1.1.0-dev
+# Debug Helper (debugHelper.py), version 1.0.01-dev
 # An NVDA global plugin to make dealing with the NVDA log easier and more efficient.
 
 #    Copyright (C) 2019 Luke Davis <newanswertech@gmail.com>
