@@ -14,7 +14,7 @@ environment:
 
 init:
   - ps: |
-      Set-AppveyorBuildVariable -name "description" -value $(APPVEYOR_REPO_TAG_NAME) -replace '^.*[^\d]' # Strips leading "v" etc. off of version numbers for descriptions
+      Set-AppveyorBuildVariable -name "description" -value $env:APPVEYOR_REPO_TAG_NAME -replace '^.*[^\d]' # Strips leading "v" etc. off of version numbers for descriptions
       if ($env:APPVEYOR_REPO_TAG_NAME) {
         if ($env:APPVEYOR_REPO_TAG_NAME -match '-dev|-alpha|-beta') {
           Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
