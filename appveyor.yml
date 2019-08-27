@@ -45,13 +45,13 @@ artifacts:
     
 deploy:
   release: $(APPVEYOR_REPO_TAG_NAME)
-  description: "Version $(APPVEYOR_description)"
+  description: "Version $(description)"
   provider: GitHub
   auth_token:
     secure: ayZmtkNXgFmwTjA6LMI7/cCcFVAL9w7IiKuCOFeegjntytcAOY8Wzb2LAX2ZqKgY
   artifact: addon
   draft: false
-  prerelease: $(APPVEYOR_prerelease)
+  prerelease: $(prerelease)
   on:
     appveyor_repo_tag: true        # deploy on tag push only
     
@@ -71,7 +71,7 @@ deploy:
 notifications:
   - provider: Email
     to:
-      - 'newanswertech@gmail.com' #'{{build_commitAuthorEmail}}'
+      - '{{build_commitAuthorEmail}}'
     on_build_success: true
     on_build_failure: true
     on_build_status_changed: true
