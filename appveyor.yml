@@ -51,7 +51,7 @@ deploy:
     secure: ayZmtkNXgFmwTjA6LMI7/cCcFVAL9w7IiKuCOFeegjntytcAOY8Wzb2LAX2ZqKgY
   artifact: addon
   draft: false
-  prerelease: True # $(APPVEYOR_prerelease)
+  prerelease: $(APPVEYOR_prerelease)
   on:
     appveyor_repo_tag: true        # deploy on tag push only
     
