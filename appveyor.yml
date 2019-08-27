@@ -51,7 +51,7 @@ artifacts:
     
 deploy:
   release: $(APPVEYOR_REPO_TAG_NAME)
-  description: $(APPVEYOR_REPO_TAG_MESSAGE)
+  description: $(APPVEYOR_REPO_TAG_DESCRIPTION)
   provider: GitHub
   auth_token:
     secure: ayZmtkNXgFmwTjA6LMI7/cCcFVAL9w7IiKuCOFeegjntytcAOY8Wzb2LAX2ZqKgY
