@@ -10,6 +10,24 @@ init:
       if ($env:APPVEYOR_REPO_TAG_NAME) {
         if ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev")) {
           Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
+        } elseif ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev1")) {
+          Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
+        } elseif ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev2")) {
+          Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
+        } elseif ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev3")) {
+          Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
+        } elseif ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev4")) {
+          Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
+        } elseif ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev5")) {
+          Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
+        } elseif ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev6")) {
+          Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
+        } elseif ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev7")) {
+          Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
+        } elseif ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev8")) {
+          Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
+        } elseif ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev9")) {
+          Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
         } else {
           Set-AppveyorBuildVariable -Name "prerelease" -Value "false"
         }
@@ -33,13 +51,13 @@ artifacts:
     
 deploy:
   release: $(APPVEYOR_REPO_TAG_NAME)
-  description: $(APPVEYOR_REPO_TAG_NAME)
+  description: $(APPVEYOR_REPO_TAG_MESSAGE)
   provider: GitHub
   auth_token:
     secure: ayZmtkNXgFmwTjA6LMI7/cCcFVAL9w7IiKuCOFeegjntytcAOY8Wzb2LAX2ZqKgY
   artifact: addon
   draft: false
-  prerelease: false
+  prerelease: $(prerelease)
   on:
     appveyor_repo_tag: true        # deploy on tag push only
     
