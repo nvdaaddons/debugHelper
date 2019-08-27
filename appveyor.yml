@@ -20,13 +20,10 @@ init:
       if ($env:APPVEYOR_REPO_TAG_NAME) {
         if ($env:APPVEYOR_REPO_TAG_NAME -match '-dev|-alpha|-beta') {
           Set-AppveyorBuildVariable -Name "prerelease" -Value "true"
-          Add-AppveyorMessage -Message "This is a pre-release build." -category Information
         } else {
           Set-AppveyorBuildVariable -Name "prerelease" -Value "false"
-          Add-AppveyorMessage -Message "This is not a pre-release build." -category Information
         }
       }
-  - echo "Old is set to %olddescription%. new is set to %newdescription%. Description is set to %description%."
 
 install:
   - set path=%path%;C:\Python37\Scripts
