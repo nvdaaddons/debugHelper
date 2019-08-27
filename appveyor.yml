@@ -5,8 +5,7 @@ max_jobs: 1
 branches:
   only:
     - master
-    - /test/
-    - /beta/
+    - /test|alpha|beta/
     - /^\d+\.\d+(\.\d+)?$/
     - /^v?\d+\.\d+\.\d+(-[a-zA-Z0-9\.]+)?$/ # Because it applies to tags as well
 
@@ -15,6 +14,7 @@ environment:
 
 init:
   - ps: |
+      Set-AppveyorBuildVariable "description" $(APPVEYOR_REPO_TAG_NAME) -replace '^.*?\d' # Strips leading "v" etc. off of version numbers for descriptions
       if ($env:APPVEYOR_REPO_TAG_NAME) {
         if ($env:APPVEYOR_REPO_TAG_NAME -match '-dev|-alpha|-beta') {
           Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
@@ -24,7 +24,7 @@ init:
           Add-AppveyorMessage -Message "This is not a pre-release build." -category Information
         }
       }
-      Write-Host "Prerelease is $(prerelease)."
+  - echo Pre-release is set to $(prerelease)
 
 install:
   - set path=%path%;C:\Python37\Scripts
@@ -45,7 +45,7 @@ artifacts:
     
 deploy:
   release: $(APPVEYOR_REPO_TAG_NAME)
-  description: "Version $(APPVEYOR_REPO_TAG_NAME)"
+  description: "Version $(APPVEYOR_description)"
   provider: GitHub
   auth_token:
     secure: ayZmtkNXgFmwTjA6LMI7/cCcFVAL9w7IiKuCOFeegjntytcAOY8Wzb2LAX2ZqKgY
