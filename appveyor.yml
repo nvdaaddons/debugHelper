@@ -26,7 +26,7 @@ init:
           Add-AppveyorMessage -Message "This is not a pre-release build." -category Information
         }
       }
-  - echo "Pre-release is set to %prerelease% or maybe %APPVEYOR_prerelease% or even %APPVEYOR_PRERELEASE%"
+  - echo "Old is set to %oldDescription%. new is set to %newDescription%. Description is set to %description%."
 
 install:
   - set path=%path%;C:\Python37\Scripts
