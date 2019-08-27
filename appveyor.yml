@@ -45,13 +45,13 @@ artifacts:
     
 deploy:
   release: $(APPVEYOR_REPO_TAG_NAME)
-  description: $(APPVEYOR_REPO_TAG_NAME)
+  description: "Version $(APPVEYOR_REPO_TAG_NAME)"
   provider: GitHub
   auth_token:
     secure: ayZmtkNXgFmwTjA6LMI7/cCcFVAL9w7IiKuCOFeegjntytcAOY8Wzb2LAX2ZqKgY
   artifact: addon
   draft: false
-  prerelease: $(APPVEYOR_prerelease)
+  prerelease: True # $(APPVEYOR_prerelease)
   on:
     appveyor_repo_tag: true        # deploy on tag push only
     
