@@ -8,32 +8,18 @@ environment:
 init:
   - ps: |
       if ($env:APPVEYOR_REPO_TAG_NAME) {
-        if ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev")) {
+        if ($env:APPVEYOR_REPO_TAG_NAME -match '-dev|-alpha|-beta') {
           Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
-        } elseif ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev1")) {
-          Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
-        } elseif ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev2")) {
-          Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
-        } elseif ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev3")) {
-          Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
-        } elseif ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev4")) {
-          Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
-        } elseif ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev5")) {
-          Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
-        } elseif ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev6")) {
-          Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
-        } elseif ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev7")) {
-          Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
-        } elseif ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev8")) {
-          Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
-        } elseif ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev9")) {
-          Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
+          Add-AppveyorMessage -Message "This is a pre-release build." -category Information
         } else {
           Set-AppveyorBuildVariable -Name "prerelease" -Value "false"
+          Add-AppveyorMessage -Message "This is not a pre-release build." -category Information
         }
       }
+      Write-Host "Prerelease is $(prerelease)."
 
 install:
+  - set path=%path%;C:\Python37\Scripts
   - py -m pip install markdown
   - py -m pip install scons
 
@@ -51,13 +37,13 @@ artifacts:
     
 deploy:
   release: $(APPVEYOR_REPO_TAG_NAME)
-  description: $(APPVEYOR_REPO_TAG_DESCRIPTION)
+  description: $(APPVEYOR_REPO_TAG_NAME)
   provider: GitHub
   auth_token:
     secure: ayZmtkNXgFmwTjA6LMI7/cCcFVAL9w7IiKuCOFeegjntytcAOY8Wzb2LAX2ZqKgY
   artifact: addon
   draft: false
-  prerelease: $(prerelease)
+  prerelease: $(APPVEYOR_prerelease)
   on:
     appveyor_repo_tag: true        # deploy on tag push only
     
@@ -73,3 +59,11 @@ deploy:
 #  on:
 #    appveyor_repo_tag: true        # deploy on tag push only
 #    branch: /stable/
+
+notifications:
+  - provider: Email
+    to:
+      - 'newanswertech@gmail.com' #'{{build_commitAuthorEmail}}'
+    on_build_success: true
+    on_build_failure: true
+    on_build_status_changed: true
