@@ -30,6 +30,7 @@ init:
 
 install:
   - set path=%path%;C:\Python37\Scripts
+  - py -m pip install --upgrade pip
   - py -m pip install markdown
   - py -m pip install scons
 
@@ -73,7 +74,7 @@ deploy:
 notifications:
   - provider: Email
     to:
-      - '{{Build_commitAuthorEmail}}'
+      - '{{BUILD_commitAuthorEmail}}'
     on_build_success: true
     on_build_failure: true
     on_build_status_changed: true
