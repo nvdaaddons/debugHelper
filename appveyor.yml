@@ -14,7 +14,9 @@ environment:
 
 init:
   - ps: |
-      Set-AppveyorBuildVariable -name "description" -value $env:APPVEYOR_REPO_TAG_NAME -replace '^.*[^\d]' # Strips leading "v" etc. off of version numbers for descriptions
+      $oldDescription = $env:APPVEYOR_REPO_TAG_NAME
+      $newDescription = $oldDescription -replace '^.*[^\d]', ''
+      Set-AppveyorBuildVariable "description" "$newDescription"
       if ($env:APPVEYOR_REPO_TAG_NAME) {
         if ($env:APPVEYOR_REPO_TAG_NAME -match '-dev|-alpha|-beta') {
           Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
@@ -25,6 +27,9 @@ init:
         }
       }
   - echo Pre-release is set to %prerelease% or maybe %APPVEYOR_prerelease% or even %APPVEYOR_PRERELEASE%
+  - echo old: %oldDescription%
+  - echo new: %newDescription%
+  - echo Result: %description%
 
 install:
   - set path=%path%;C:\Python37\Scripts
