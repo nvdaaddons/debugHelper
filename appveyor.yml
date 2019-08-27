@@ -1,5 +1,4 @@
 version: "{branch}-{build}"
-
 max_jobs: 1
 
 branches:
@@ -14,11 +13,13 @@ environment:
 
 init:
   - ps: |
+      # For getting the "v" or whatever off of the start of version numbers in the description field
       $olddescription = $env:APPVEYOR_REPO_TAG_NAME
       $newdescription=$oldDescription -replace '^.*?[^\d]', ''
       Set-AppveyorBuildVariable "description" "$newdescription"
+      # Configuration for pre-release status
       if ($env:APPVEYOR_REPO_TAG_NAME) {
-        if ($env:APPVEYOR_REPO_TAG_NAME -match '-dev|-alpha|-beta') {
+        if ($env:APPVEYOR_REPO_TAG_NAME -match 'dev|alpha|beta') {
           Set-AppveyorBuildVariable -Name "prerelease" -Value "true"
         } else {
           Set-AppveyorBuildVariable -Name "prerelease" -Value "false"
@@ -55,19 +56,6 @@ deploy:
   on:
     appveyor_repo_tag: true        # deploy on tag push only
     
-#deploy:
-#  release: $(APPVEYOR_REPO_TAG_NAME)
-#  description: $(APPVEYOR_REPO_TAG_NAME)
-#  provider: GitHub
-#  auth_token:
-#    secure: ayZmtkNXgFmwTjA6LMI7/cCcFVAL9w7IiKuCOFeegjntytcAOY8Wzb2LAX2ZqKgY
-#  artifact: addon
-#  draft: false
-#  prerelease: $(prerelease)
-#  on:
-#    appveyor_repo_tag: true        # deploy on tag push only
-#    branch: /stable/
-
 notifications:
   - provider: Email
     to:
