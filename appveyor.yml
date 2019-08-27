@@ -27,9 +27,6 @@ init:
         }
       }
   - echo "Pre-release is set to %prerelease% or maybe %APPVEYOR_prerelease% or even %APPVEYOR_PRERELEASE%"
-  - echo "old:%oldDescription%"
-  - echo "new:%newDescription%"
-  - echo "Result:%description%"
 
 install:
   - set path=%path%;C:\Python37\Scripts
