@@ -1,6 +1,6 @@
 version: "{branch}-{build}"
 
-max_jobs: 3
+max_jobs: 1
 
 environment:
  PY_PYTHON: 3.7-32
@@ -8,10 +8,10 @@ environment:
 init:
   - ps: |
       if ($env:APPVEYOR_REPO_TAG_NAME) {
-        if ($env:APPVEYOR_REPO_TAG_NAME.StartsWith("beta-")) {
-          Set-AppveyorBuildVariable -Name "prerelease" -Value tru
+        if ($env:APPVEYOR_REPO_TAG_NAME.EndsWith("-dev")) {
+          Set-AppveyorBuildVariable -Name "prerelease" -Value "tru"
         } else {
-          Set-AppveyorBuildVariable -Name "prerelease" -Value false
+          Set-AppveyorBuildVariable -Name "prerelease" -Value "false"
         }
       }
 
@@ -39,7 +39,7 @@ deploy:
     secure: ayZmtkNXgFmwTjA6LMI7/cCcFVAL9w7IiKuCOFeegjntytcAOY8Wzb2LAX2ZqKgY
   artifact: addon
   draft: false
-  prerelease: true
+  prerelease: false
   on:
     appveyor_repo_tag: true        # deploy on tag push only
     

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Debug Helper (debugHelper.py), version 1.0.01-dev
+# Debug Helper (debugHelper.py), version 1.0.1
 # An NVDA global plugin to make dealing with the NVDA log easier and more efficient.
 
 #    Copyright (C) 2019 Luke Davis <newanswertech@gmail.com>
@@ -12,7 +12,9 @@
 # You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-# This add-on is intended to make debugging tasks easier for developers. If you make frequent use of the NVDA log, this may provide features that help you.
+# This add-on complies with Semantic Versioning: https://semver.org/
+
+# Debug Helper is intended to make debugging tasks easier for developers. If you make frequent use of the NVDA log, this may provide features that help you.
 # Other things are planned, but currently the only implemented feature is:
 # Press NVDA+shift+F1, to insert a sequentially numbered line in the log. (Can be remapped under Tools in Input Gesture settings.)
 # This makes it easier to find where you were last, before or after you performed a certain action.
@@ -28,8 +30,7 @@ import globalPluginHandler, globalVars
 import gui, wx
 import addonHandler
 
-# This is an apparently undocumented function of addonHandler. Since everybody seems to call it, I do, but just guessing what it probably does.
-addonHandler.initTranslation()
+addonHandler.initTranslation()	# Makes translations work correctly.
 
 # CONSTANTS:
 DH_DEFAULT_BLANKS_BEFORE = 1
