@@ -45,6 +45,10 @@ Under the Tools category of NVDA's Input Gestures panel, you can change NVDA+shi
 
 ## Changelog
 
+### Version 1.0.2 (2019-08-28)
+
+* Fixes to translation comments, and code cleanup.
+
 ### Version 1.0.1 (2019-08-26)
 
 * Minor bugfix version to fix an install problem on certain versions of Windows.

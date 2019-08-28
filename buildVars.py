@@ -21,7 +21,7 @@ addon_info = {
 Inserts sequentially numbered mark lines in the log when you press NVDA+shift+F1, to make it easy to search for things, by "tagging" them.
 Contact me if you find it useful, and especially with feature ideas."""),
 	# version
-	"addon_version" : "1.0.1",
+	"addon_version" : "1.0.2",
 	# Author(s)
 	"addon_author" : u"Luke Davis <newanswertech@gmail.com>",
 	# URL for the add-on documentation support
