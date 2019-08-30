@@ -58,7 +58,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(DebugHelperSettings)
 		else:
 			self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
-			self.dhSettings = self.prefsMenu.Append(wx.ID_ANY, _("&Debug Helper..."), _("Debug Helper add-on settings"))
+			self.dhSettings = self.prefsMenu.Append(wx.ID_ANY, _("&Debug Helper 1..."), _("Debug Helper add-on settings 2"))
 			gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onConfigDialog, self.dhSettings)
 
 	# Needed for NVDA configuration dialog setup
