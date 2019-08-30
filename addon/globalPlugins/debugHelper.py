@@ -35,7 +35,7 @@ addonHandler.initTranslation()	# Makes translations work correctly.
 DH_DEFAULT_BLANKS_BEFORE = 1
 DH_DEFAULT_BLANKS_AFTER = 0
 
-class GlobalPlugin (globalPluginHandler.GlobalPlugin):
+class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	# CONFIG
 	# In case you don't like "-- MARK <number> --" as your text. The number is represented by {0}.
