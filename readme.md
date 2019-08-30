@@ -43,19 +43,12 @@ Under the Tools category of NVDA's Input Gestures panel, you can change NVDA+shi
 
 ## Changelog
 
-### Version 1.0.2 (2019-08-28)
-
-* Fixes to translation comments, and code cleanup.
-
-### Version 1.0.1 (2019-08-26)
-
-* Minor bugfix version to fix an install problem on certain versions of Windows.
-    - CRLF fixes in code (DOS/Windows newlines converted to Unix style).
-    - Forced UTF8 encoding.
-
-### Version 1.0 (2019-08-22)
-
-* Initial release.
-    - Ability to generate numbered mark lines in the log (at info level).
-    - Ability to add 0-10 blank lines before and after each mark line.
-    - Configuration via NVDA settings dialog system.
+* Version 1.0.2 (2019-08-28)
+    - Translation and code cleanup.
+* Version 1.0.1 (2019-08-26)
+    - Minor bugfix version to probably fix an install problem on certain versions of Windows.
+* Version 1.0 (2019-08-22)
+    - Initial release. Including following features:
+        + Ability to generate numbered mark lines in the log (at info level).
+        + Ability to add 0-10 blank lines before and after each mark line.
+        + Configuration via NVDA settings dialog system.
