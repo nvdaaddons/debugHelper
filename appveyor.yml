@@ -19,7 +19,7 @@ init:
       Set-AppveyorBuildVariable "description" "$newdescription"
       # Configuration for pre-release status
       if ($env:APPVEYOR_REPO_TAG_NAME) {
-        if ($env:APPVEYOR_REPO_TAG_NAME -match 'dev|alpha|beta') {
+        if ($env:APPVEYOR_REPO_TAG_NAME -match 'dev|alpha|beta|test') {
           Set-AppveyorBuildVariable -Name "prerelease" -Value "true"
         } else {
           Set-AppveyorBuildVariable -Name "prerelease" -Value "false"
