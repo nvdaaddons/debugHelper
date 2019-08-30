@@ -46,11 +46,11 @@ artifacts:
 after_build:
   - 7z c buildResults.zip --recursive *
   - ps: |
-    if ($env:APPVEYOR_REPO_TAG_NAME) {
-      if ($env:APPVEYOR_REPO_TAG_NAME -match 'test') {
-        Push-AppveyorArtifact buildResults.zip
+      if ($env:APPVEYOR_REPO_TAG_NAME) {
+        if ($env:APPVEYOR_REPO_TAG_NAME -match 'test') {
+          Push-AppveyorArtifact buildResults.zip
+        }
       }
-    }
     
 deploy:
   release: $(APPVEYOR_REPO_TAG_NAME)
