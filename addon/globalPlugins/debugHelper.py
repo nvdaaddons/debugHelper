@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Debug Helper (debugHelper.py), version 1.0.3-alpha1
+# Debug Helper (debugHelper.py), version 1.0.3-alpha2
 # An NVDA global plugin to make dealing with the NVDA log easier and more efficient.
 
 #    Copyright (C) 2019 Luke Davis <newanswertech@gmail.com>
@@ -58,7 +58,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(DebugHelperSettings)
 		else:
 			self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
-			self.dhSettings = self.prefsMenu.Append(wx.ID_ANY, _("&Debug Helper 1..."), _("Debug Helper add-on settings 2"))
+			# Translators: first is the NVDA Preferences menu item for the debugHelper settings dialog
+			# Translators: second is help text for the menu item
+			self.dhSettings = self.prefsMenu.Append(wx.ID_ANY, _("&Debug Helper..."), _("Debug Helper add-on settings"))
 			gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onConfigDialog, self.dhSettings)
 
 	# Needed for NVDA configuration dialog setup
