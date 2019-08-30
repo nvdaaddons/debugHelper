@@ -1,7 +1,7 @@
 # Debug Helper
 
 * Author: Luke Davis
-* Download [stable version](https://github.com/XLTechie/debugHelper/releases/download/1.0.1/debugHelper-1.0.1.nvda-addon)
+* Download [stable version](https://github.com/XLTechie/debugHelper/releases/download/v1.0.2/debugHelper-1.0.1.nvda-addon)
 
 * Download [development version][2]
 
