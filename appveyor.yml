@@ -31,6 +31,8 @@ install:
 
 build_script:
   - set path=%path%;C:\Python37\Scripts
+  - Start-FileDownload https://gist.github.com/XLTechie/f0ebdfefef3e5df88b289434ae07370b/raw/bb79b4d989a8245347afdddda0f59f26f1af7279/gettextFiles.zip
+  - 7z e gettextFiles.zip -y *.exe
   - scons
   - scons pot
 
