@@ -44,7 +44,7 @@ artifacts:
     type: application/x-pot
 
 after_build:
-  - 7z c buildResults.zip --recursive *
+  - 7z a buildResults.zip * -r
   - ps: |
       if ($env:APPVEYOR_REPO_TAG_NAME) {
         if ($env:APPVEYOR_REPO_TAG_NAME -match 'test') {
