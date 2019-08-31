@@ -1,7 +1,7 @@
 # Debug Helper
 
 * Author: Luke Davis
-* Download [stable version](https://github.com/XLTechie/debugHelper/releases/download/v1.0.3/debugHelper-1.0.3.nvda-addon)
+* Download [stable version](https://addons.nvda-project.org/files/get.php?file=debughelper)
 
 The purpose of this add-on is to make debugging things in NVDA easier.
 New features will be added based on user suggestions. All emails or [GitHub issues](https://github.com/XLTechie/debugHelper) with feedback or feature ideas are most welcome.
@@ -40,6 +40,10 @@ Note: the mark count will survive the reloading of plugins (NVDA+control+F3), bu
 
 In the Settings section of NVDA Preferences, you will find a "Debug Helper" category. In the settings dialog you can change the number of blank lines inserted before and after each mark line. The default is one line before, and zero after, although you can use zero through 10 lines for either.
 Under the Tools category of NVDA's Input Gestures panel, you can change NVDA+shift+F1 to a key sequence of your choice.
+
+## Compatibility:
+
+This add-on is compatible with NVDA versions 2017.3 (used with Windows XP), and all newer versions. Last tested with 2019.3.
 
 ## Changelog
 
