@@ -47,10 +47,12 @@ This add-on is compatible with NVDA versions 2017.3 (used with Windows XP), and 
 
 ## Changelog
 
-* Version 1.0.2 (2019-08-28)
-    - Translation and code cleanup.
+Important changes only; see the git history for small stuff.
+
+Latest version: 1.0.3. (2019-08-29)
+
 * Version 1.0.1 (2019-08-26)
-    - Minor bug-fix version to probably fix an install problem on certain versions of Windows.
+    - Minor bugfix version to probably solve an install problem on certain versions of Windows.
 * Version 1.0 (2019-08-22)
     - Initial release. Including following features:
         + Ability to generate numbered mark lines in the log (at info level).
