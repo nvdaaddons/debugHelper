@@ -1,11 +1,7 @@
 # Debug Helper
 
 * Author: Luke Davis
-<<<<<<< HEAD
 * Download [stable version][1]
-=======
-* Download [stable version](https://addons.nvda-project.org/files/get.php?file=debughelper)
->>>>>>> 91aedb401409ede76bce34b3951f048d1d86fe08
 
 The purpose of this add-on is to make debugging things in NVDA easier.
 New features will be added based on user suggestions. All emails or [GitHub issues](https://github.com/XLTechie/debugHelper) with feedback or feature ideas are most welcome.
