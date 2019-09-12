@@ -18,13 +18,13 @@ funciones nuevas son bienvenidos.
 Cuando pulses el atajo de teclado, el complemento insertará una línea como
 la siguiente en el registro de NVDA (en el nivel Info):
 
-``` -- Mark 1 -- ```
+``` -- Marca 1 -- ```
 
 También anunciará: "¡Marca 1 grabada!"
 
 Si pulsas el atajo de teclado de nuevo, obtendrás:
 
-``` -- Mark 2 -- ```
+``` -- Marca 2 -- ```
 
 y se verbalizará "¡Marca 2 grabada!".
 
