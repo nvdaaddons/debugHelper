@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the debugHelper package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: debugHelper 1.0.3\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2019-08-31 01:47+1000\n"
+"PO-Revision-Date: 2019-09-17 20:06+0200\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Iván Novegil Cancelas <ivan.novegil.cancelas@gmail.com>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.2.3\n"
+
+#. CONFIG
+#. In case you don't like "-- MARK <number> --" as your text. The number is represented by {0}.
+#. Translators: the message entered in the log, containing the mark and its sequence number (number represented by {0} placeholder)
+#, python-brace-format
+msgid "-- MARK {0} --"
+msgstr "-- MARCA ´{0} --"
+
+#. Translators: first is the NVDA Preferences menu item for the debugHelper settings dialog
+#. Translators: second is help text for the menu item
+msgid "&Debug Helper..."
+msgstr "&Debug Helper..."
+
+msgid "Debug Helper add-on settings"
+msgstr "Opcións do complemento Debug Helper"
+
+#. Translators: a message telling the user that a mark has been inserted in the log, and giving its sequence number
+#, python-brace-format
+msgid "Logging mark {0}!"
+msgstr "Rexistrando marca {0}!"
+
+#. Translators: input help message for a Debug Helper command
+msgid "Inserts a mark line in the log to aid in debugging"
+msgstr "Inserta unha liña de marca no rexistro para axudar coa depuración"
+
+#. Translators: This is the label for the Debug Helper settings category in NVDA Settings screen.
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Debug Helper"
+msgstr "Debug Helper"
+
+#. Translators: The label for a setting in Debug Helper settings dialog to set blank lines inserted before marks
+msgid ""
+"Number of blank lines before each mark (can make marks easier to find with "
+"fast arrowing)"
+msgstr ""
+"Número de liñas en branco antes de cada marca (pode facer que as marcas "
+"sexan máis doadas de atopar con frecha abaixo rapidamente)"
+
+#. Translators: The label for a setting in Debug Helper settings dialog to set blank lines inserted after marks
+msgid "Number of blank lines after each mark"
+msgstr "Número de liñas en branco despois de cada marca"
+
+#. Translators: This is the label for the Debug Helper settings dialog (used in NVDA versions before settings category panel).
+msgid "Debug Helper Settings"
+msgstr "Opcións de Debug Helper"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"Makes debugging tasks easier for developers and others trying to solve "
+"problems.\n"
+"Inserts sequentially numbered mark lines in the log when you press NVDA+shift"
+"+F1, to make it easy to search for things, by \"tagging\" them.\n"
+"Contact me if you find it useful, and especially with feature ideas."
+msgstr ""
+"Fai a tarefa da depuración máis doada para desenvolvedores e outros que "
+"intenta resolver problemas.\n"
+"Inserta liñas de marca numeradas secuencialmente no rexistro ao premer NVDA"
+"+shift+F1, para facilitar a procura de cousas, etiquetándoas.\n"
+"Contáctame se o ves útil, e especialmente con ideas de características."
