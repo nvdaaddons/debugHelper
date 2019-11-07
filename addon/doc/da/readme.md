@@ -27,9 +27,9 @@ Hvis du trykker på tasten igen:
 
 og "Logger Mark 2!" vil blive oplyst.
 
-Lad os sige for eksempel, at du var ved at udføre en række opgaver, som du
-ved generere mange fejl i NVDA-loggen. Du skal sende de relevante dele af
-din log til en mailingliste eller til [NVDA GitHub Issue
+Lad os sige, at du var ved at udføre en række opgaver, som du ved generere
+mange fejl i NVDA-loggen. Du skal sende de relevante dele af din log til en
+mailingliste eller til [NVDA GitHub Issue
 tracker](https:/github.com/nvaccess/NVDA/Issues). Du ønsker ikke at læse
 gennem hele din log for at finde det relevante indhold, så du bruger denne
 tilføjelse til at indsætte Mark 1, lige før du gør de ting, der forårsager
@@ -54,7 +54,7 @@ op/ned gennem loggen for at finde et bestemt mærke. Det er nemt at høre
 ordet "blank" under en hurtig gennemgang af en større mængde tekst, der
 udtales eftersom du hurtigt bevæger dig gennem loggen. Hvis du bruger
 piletasterne ret hurtigt, får du måske brug for flere blanke linjer. Du kan
-justere dette i indstillingerne.
+tilpasse dette i indstillingerne.
 
 Bemærk: Tælleren der anvendes til mærker bevares efter genindlæsning af
 plugins (NVDA+Control+F3), men men bevares ikke, hvis du genstarter NVDA.
@@ -64,9 +64,9 @@ plugins (NVDA+Control+F3), men men bevares ikke, hvis du genstarter NVDA.
 I afsnittet Indstillinger i NVDA-indstillingerne finder du kategorien
 "Fejlfindingshjælper". I indstillingsdialogen kan du ændre antallet af
 blanke linjer, som indsættes før og efter hver Mark-linje. Standarden er én
-linje før, og nul efter, selvom du kan bruge 0 til 10 linjer for enten.
-Under menuen "Værktøjer" i NVDA-panelet "Inputbevægelser" kan du ændre
-NVDA+Shift+F1 til en tastesekvens efter eget valg.
+linje før, og nul efter, selvom du kan bruge 0 til 10 linjer for begge
+muligheder.  Under menuen "Værktøjer" i NVDA-panelet "Inputbevægelser" kan
+du ændre NVDA+Shift+F1 til en tastesekvens efter eget valg.
 
 ## Ændringslog
 
