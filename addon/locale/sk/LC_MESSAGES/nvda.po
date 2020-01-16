@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: debugHelper 1.0.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2019-08-31 01:47+1000\n"
-"PO-Revision-Date: 2019-09-24 23:54+0200\n"
+"PO-Revision-Date: 2020-01-12 14:26+0100\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: \n"
+"Last-Translator: Ondrej Rosík <ondrej.rosik@gmail.com>\n"
 "Language-Team: \n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 1.6.11\n"
 
 #. CONFIG
 #. In case you don't like "-- MARK <number> --" as your text. The number is represented by {0}.
@@ -30,16 +30,16 @@ msgid "&Debug Helper..."
 msgstr "&Pomocník pre ladenie..."
 
 msgid "Debug Helper add-on settings"
-msgstr "Nastavenie doplnku Debug Helper"
+msgstr "Nastavenie pomocníka pre ladenie"
 
 #. Translators: a message telling the user that a mark has been inserted in the log, and giving its sequence number
 #, python-brace-format
 msgid "Logging mark {0}!"
-msgstr "Zaznamenávacia značka {0}!"
+msgstr "zapísaná značka {0}!"
 
 #. Translators: input help message for a Debug Helper command
 msgid "Inserts a mark line in the log to aid in debugging"
-msgstr "Vloží značku do protokolu, ktorá uľahčí ladenie"
+msgstr "Zapíše do záznamu značku"
 
 #. Translators: This is the label for the Debug Helper settings category in NVDA Settings screen.
 #. Add-on summary, usually the user visible name of the addon.
@@ -52,16 +52,16 @@ msgid ""
 "Number of blank lines before each mark (can make marks easier to find with "
 "fast arrowing)"
 msgstr ""
-"Počet prázdnych riadkov pred každou značkou (vďaka rýchlemu smerovaniu šípky "
-"je možné značky ľahšie nájsť)"
+"Počet prázdnych riadkov pred značkou (uľahčuje vyhľadanie miesta pri rýchlom "
+"prezeraní)"
 
 #. Translators: The label for a setting in Debug Helper settings dialog to set blank lines inserted after marks
 msgid "Number of blank lines after each mark"
-msgstr "Počet prázdnych riadkov za každou značkou"
+msgstr "Počet prázdnych riadkov po značke"
 
 #. Translators: This is the label for the Debug Helper settings dialog (used in NVDA versions before settings category panel).
 msgid "Debug Helper Settings"
-msgstr "Nastavenie Debug Helper"
+msgstr "Nastavenia pomocníka pre ladenie"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -72,8 +72,7 @@ msgid ""
 "+F1, to make it easy to search for things, by \"tagging\" them.\n"
 "Contact me if you find it useful, and especially with feature ideas."
 msgstr ""
-"Zjednodušuje ladenie úloh vývojárom a ostatným, ktorí sa snažia vyriešiť "
-"problémy.\n"
-"Po stlačení NVDA + shift + F1 vloží do denníka postupne očíslované riadky, "
-"aby sa uľahčilo vyhľadávanie vecí ich označením.\n"
-"Kontaktujte autora, ak to považuje za užitočné, najmä s nápadmi na funkcie."
+"Zjednodušuje ladenie pre vývojárov a tých, ktorí riešia problémy.\n"
+"Keď stlačíte skratku NVDA+shift+F1, do logu sa zapíše očíslovaná značku. K "
+"takýmto miestam sa potom môžete v zázname rýchlo dostať.\n"
+"Neváhajte ma kontaktovať s nápadmi na vylepšenia."
