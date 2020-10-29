@@ -1,19 +1,19 @@
 # Debug Helper #
 
 * Autore: Luke Davis
-* Download [stable version][1]
+* Scarica [la versione stabile][1].
 
 Lo scopo di questo addon è quello di semplificare il processo di debugging
 in NVDA. Verranno aggiunte nuove funzionalità in base alle richieste degli
 utenti. Qualsiasi problema o idea può essere segnalata tramite posta
 elettronica oppure tramite [GitHub
-issues](https://github.com/XLTechie/debugHelper) 
+issues](https://github.com/XLTechie/debugHelper).
 
-## comando principale
+## Comando principale
 
 * NVDA + Maiusc + F1: inserisce una linea di marcatura nel log NVDA.
 
-## Spiegazione ed utilizzo
+## Spiegazioni e utilizzo
 
 Quando si utilizza il comando principale NVDA+Shift+F1, NVDA inserisce una
 riga simile alla seguente nel log, al livello Info:
@@ -26,66 +26,70 @@ Se si preme il tasto nuovamente, si otterrà:
 
 ``` -- Mark 2 -- ```
 
-e la sintesi vocale dirà: "inserito nel log Mark 2!"
+e la sintesi vocale dirà: "inserito nel log Mark 2!".
 
-Let us say for example that you were about to perform a series of tasks,
-that you know generate lengthy error content in the NVDA log. You are going
-to post the relevant portions of your log to a mailing list or the [NVDA
-GitHub issue tracker](https://github.com/nvaccess/nvda/issues). However you
-don't want to hunt through your entire log to find the relevant content. So
-you use this add-on to insert mark 1, right before you do the thing that
-causes the first error. If you know something else will generate further
-errors, or a different kind, you insert another mark to separate that error
-from the previous one, or so you can say "this is what I was doing at mark
-3, where some errors occurred." Another example: While using some
-application, something happens that causes an error (maybe you hear the
-Windows error sound). You want to go back and find that error later, but you
-don't want to stop working and save the log right now. So you use this
-add-on again, to insert a mark in your log. This time the mark will appear
-after the errors in your log, instead of before. But either way, the marks
-will help you narrow down the important sections of your log.
+Diciamo, ad esempio, che stiate eseguendo una serie di operazioni che
+producono messaggi di errore lunghi nel log di NVDA. Vorreste postare le
+parti più importanti del log in una mailing list o nell'[NVDA GitHub issue
+tracker](https://github.com/nvaccess/nvda/issues), ma non vorreste leggervi
+tutto il log per individuare le parti suddette. Utilizzate questo add-on per
+inserire la prima marcatura, subito prima di compiere la prima operazione
+che causa il primo errore. Se sapete che qualche altra operazione genererà
+ulteriori errori o comunque messaggi di interesse, inserite questa marcatura
+per separare questi errori dai precedenti, o per dire "Ecco cosa stavo
+facendo al mark 3, dove si sono verificati alcuni errori". Un altro esempio:
+mentre utilizzate un'applicazione, accade qualcosa che causa un errore
+(probabilmente sentite il suono di errore di Windows). Vorreste tornare
+indietro e trovare quell'errore più tardi, ma non volete interrompere il
+lavoro e salvare il log proprio ora. Utilizzate nuovamente questo add-on per
+inserire una marcatura nel log. Questa volta la marcatura apparirà dopo gli
+errori nel log, anziché prima. In entrambi i casi, comunque, le marcature vi
+aiuteranno a delimitare le parti importanti del vostro log.
 
-The mark lines shown above can be easily searched for with the find command
-in a text editor such as Notepad or Notepad++.  Additionally, by default,
-there is a blank line inserted above each mark. Blank lines are also
-possible after the mark. Blank lines can be helpful if you are using NVDA's
-log viewer, or another text editor, and want to use the arrow keys to
-quickly read up/down through the log, to find a particular mark. It is easy
-to pick the word "blank" out of a bunch of text being spoken as you quickly
-move through the log. If you arrow really fast, you might need more than one
-blank line, which you can adjust in settings.
+Le linee di demarcazione sopra mostrate possono essere facilmente cercate
+con il comando "trova" in un editor di testi, come Notepad or
+Notepad++. Inoltre, per default, viene inserita una linea vuota sopra ogni
+marcatura. E' anche possibile inserire linee vuote dopo la marcatura
+stessa. Le linee vuote possono essere utili se si sta utilizzando il
+visualizzatore di log di NVDA o un altro editor di testi e si vogliono
+utilizzare i tasti freccia per scorrere velocemente il log, per trovare una
+certa marcatura. E' facile discernere la parola "vuoto" in mezzo a tante
+altre parole che la sintesi vocale recita quando ci si muove rapidamente
+attraverso il log. Se vi spostate molto velocemente, potreste aver bisogno
+di più righe vuote; potete settare questo parametro nelle impostazioni.
 
-Note: The mark count will survive the reloading of plugins
-(NVDA+Control+F3), but will start back at one if you restart NVDA.
+Nota: il conteggio delle marcature non viene perso quando i plugins vengono
+ricaricati (NVDA+Control+F3), ma riparte da 1 se si riavvia NVDA.
 
 ## Configurazione:
 
-In the Settings section of NVDA Preferences, you will find a "Debug Helper"
-category. In the settings dialog you can change the number of blank lines
-inserted before and after each mark line. The default is one line before,
-and zero after, although you can use 0 through 10 lines for either.  Under
-the Tools category of NVDA's Input Gestures panel, you can change
-NVDA+Shift+F1 to a key sequence of your choice.
+Nella sezione Impostazioni delle preferenze di NVDA, troverete la categoria
+"Debug Helper". Nella relativa finestra potete modificare il numero di linee
+vuote inserite prima e dopo ogni linea di marcatura. Il default è una linea
+prima e zero dopo, ma potete inserire valori da 0 a 10. Nella categoria
+Strumenti della finestra Gesti e Tasti di Immissione di NVDA, potete
+sostituire NVDA+Shift+F1 con un'altra combinazione di tasti a vostra scelta.
 
 ## Changelog
 
-* Version 1.0.2 (2019-08-28)
+* Novità nella versione 1.0.2 (28-08-2019)
 
-    - Translation and code cleanup.
+    - Pulizia del codice e della traduzione.
 
-* Version 1.0.1 (2019-08-26)
+* Novità nella versione 1.0.1 (26-08-2019)
 
-    - Minor bugfix version to probably fix an install problem on certain
-      versions of Windows.
+    - Correzione di bug minori per (probabilmente) correggere un problema di
+      installazione su alcune versioni di Windows.
 
-* Version 1.0 (2019-08-22)
+* Novità nella versione 1.0 (22-08-2019)
 
-    - Initial release. Including following features:
+    - Versione iniziale, che comprende le seguenti caratteristiche:
 
-        + Ability to generate numbered mark lines in the log (at info
-          level).
-        + Ability to add 0-10 blank lines before and after each mark line.
-        + Configuration via NVDA settings dialog system.
+        + Capacità di generare linee di marcatura numerate nel log (al
+          livello info).
+        + Capacità di aggiungere da 0 a 10 linee vuote prima e dopo ogni
+          linea di marcatura.
+        + Configurazione attraverso le impostazioni di NVDA.
 
 [[!tag dev stable]]
 
