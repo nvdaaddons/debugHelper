@@ -17,13 +17,17 @@ ideer er meget velkomne.
 Når du trykker på Kommandotasten, indsætter tilføjelsesprogrammet en linje
 som følgende i NVDA-loggen (på infoniveau):
 
-``` -- Mark 1 -- ```
+```
+-- Mark 1 --
+```
 
 NVDA vil også annoncere: "Logger Mark 1!"
 
 Hvis du trykker på tasten igen:
 
-``` -- Mark 2 -- ```
+```
+-- Mark 2 --
+```
 
 og "Logger Mark 2!" vil blive oplyst.
 

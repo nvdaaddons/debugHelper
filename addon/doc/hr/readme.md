@@ -17,13 +17,17 @@ informacijama ili idejama o funkcijama su dobrodošli.
 Kad pritisneš tipkovnički prečac, dodatak ubacuje sljedeći redak u NVDA log
 zapis (na razini informacija):
 
-``` -- Oznaka 1 -- ```
+```
+-- Mark 1 --
+```
 
 Najavit će i: „Oznaka 1 zapisana!”
 
 Ako ponovo pritisneš prečac, dobit ćeš:
 
-``` -- Oznaka 2 -- ```
+```
+-- Mark 2 --
+```
 
 i izgovorit će se „Oznaka 2 zapisana!”
 

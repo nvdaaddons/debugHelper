@@ -18,13 +18,17 @@ recursos são bem-vindos.
 Quando pressiona a tecla de comando, o extra insere uma linha como a
 seguinte, no log do NVDA (no nível Informações):
 
-``` -- Marcador 1 -- ```
+```
+-- Mark 1 --
+```
 
 Também falará: "guardado no log Marcador 1!"
 
 Se pressionar a tecla novamente, obterá:
 
-``` -- Marcador 2 -- ```
+```
+-- Mark 2 --
+```
 
 e "Guardado no log Marcador 2!" será falado.
 

@@ -18,13 +18,17 @@ GitHub](https://github.com/XLTechie/debugHelper) com retroalimentação
 Quando você pressiona a tecla de comando, o complemento insere uma linha
 como a seguinte no log do NVDA (no nível Informações):
 
-``` -- Marca 1 -- ```
+```
+-- Mark 1 --
+```
 
 Ele também anunciará: "Gravado no log Marca 1!"
 
 Se você pressionar a tecla novamente, você obterá:
 
-``` -- Marca 2 -- ```
+```
+-- Mark 2 --
+```
 
 e "Gravado no log Marca 2!" será falado.
 

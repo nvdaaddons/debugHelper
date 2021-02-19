@@ -15,13 +15,17 @@ nové funkcie, napíšte mi e-mail, veľmi rád ich zaradím. Akceptujem tiež
 
 Po stlačení klávesovej skratky sa do logu NVDA zapíše značka v tomto tvare:
 
-``` -- Značka1 -- ```
+```
+-- Mark 1 --
+```
 
 NVDA takisto oznámi zapísanie značky 1.
 
 Po opätovnom stlačení skratky sa do logu zapíše:
 
-``` -- Značka 2 -- ```
+```
+-- Mark 2 --
+```
 
 NVDA oznámi zapísanie značky 2.
 

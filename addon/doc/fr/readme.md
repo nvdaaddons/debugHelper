@@ -18,13 +18,17 @@ de fonctionnalités sont les bienvenus.
 Quand vous pressez la touche de commande, l'extension insère une ligne telle
 que ci-dessous dans le journal de NVDA (au niveau info):
 
-``` -- Mark 1 -- ```
+```
+-- Mark 1 --
+```
 
 Elle annoncera également : "Mark 1 journalisée !"
 
 Si vous pressez la touche de nouveau, vous obtiendrez :
 
-``` -- Mark 2 -- ```
+```
+-- Mark 2 --
+```
 
 et "Mark 2 journalisée !" sera annoncé.
 

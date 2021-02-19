@@ -18,13 +18,17 @@ características son moi benvidas.
 Cando premes a orde de teclas, o complemento inserta unha liña como a
 seguinte no rexistro do NVDA (no nivel Info):
 
-``` -- Mark 1 -- ```
+```
+-- Mark 1 --
+```
 
 Tamén anunciará: "Logged Mark 1!" (¡Rexistrada Marca 1!)
 
 Se premes a orde de novo, obterás:
 
-``` -- Mark 2 -- ```
+```
+-- Mark 2 --
+```
 
 e falarase "Logged Mark 2!"
 
