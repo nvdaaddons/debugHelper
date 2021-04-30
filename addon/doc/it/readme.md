@@ -19,7 +19,7 @@ Quando si utilizza il comando principale NVDA+Shift+F1, NVDA inserisce una
 riga simile alla seguente nel log, al livello Info:
 
 ```
--- Mark 1 --
+``` -- Mark 1 -- 
 ```
 
 Verrà anche annunciato: "inserito nel log Mark 1!"
@@ -27,7 +27,7 @@ Verrà anche annunciato: "inserito nel log Mark 1!"
 Se si preme il tasto nuovamente, si otterrà:
 
 ```
--- Mark 2 --
+``` -- Mark 2 -- 
 ```
 
 e la sintesi vocale dirà: "inserito nel log Mark 2!".
