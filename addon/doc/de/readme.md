@@ -19,7 +19,7 @@ Wenn Sie die Tastenkombination drücken, fügt die Erweiterung eine Zeile wie
 die Folgende in das NVDA-Protokoll (auf der Ebene Info) ein:
 
 ```
--- Mark 1 --
+``` -- Mark 1 --
 ```
 
 Es meldet dann: "Logged Mark 1!"
@@ -27,7 +27,7 @@ Es meldet dann: "Logged Mark 1!"
 Wenn Sie die Tastenkombination erneut drücken, erhalten Sie:
 
 ```
--- Mark 2 --
+``` -- Mark 2 --
 ```
 
 und "Logged Mark 2!" wird mitgeteilt.
