@@ -1,6 +1,6 @@
 # Debug Helper #
 
-* Auteur : Luke Davis
+* Auteur : Luke Davis
 * Télécharger [version stable][1]
 
 Le but de cette extension est de faciliter le débogage dans NVDA.  De
@@ -19,7 +19,7 @@ Quand vous pressez la touche de commande, l'extension insère une ligne telle
 que ci-dessous dans le journal de NVDA (au niveau info):
 
 ```
--- Mark 1 --
+``` -- Marque 1 -- ```
 ```
 
 Elle annoncera également : "Mark 1 journalisée !"
@@ -27,7 +27,7 @@ Elle annoncera également : "Mark 1 journalisée !"
 Si vous pressez la touche de nouveau, vous obtiendrez :
 
 ```
--- Mark 2 --
+``` -- Marque 2 -- ```
 ```
 
 et "Mark 2 journalisée !" sera annoncé.
