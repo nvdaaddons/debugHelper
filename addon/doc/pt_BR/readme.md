@@ -19,7 +19,7 @@ Quando você pressiona a tecla de comando, o complemento insere uma linha
 como a seguinte no log do NVDA (no nível Informações):
 
 ```
--- Mark 1 --
+-- Marca 1 --
 ```
 
 Ele também anunciará: "Gravado no log Marca 1!"
@@ -27,7 +27,7 @@ Ele também anunciará: "Gravado no log Marca 1!"
 Se você pressionar a tecla novamente, você obterá:
 
 ```
--- Mark 2 --
+-- Marca 2 --
 ```
 
 e "Gravado no log Marca 2!" será falado.
